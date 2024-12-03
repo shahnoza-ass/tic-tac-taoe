@@ -1,0 +1,95 @@
+/* Asosiy dizayn */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: url('images/game-background.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* O'yin maydoni */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekt */
+.square:hover {
+    transform: scale(1.1);
+    background-color: #bdc3c7;
+}
+
+/* X belgisi uchun ranglar */
+.square.x {
+    color: #e74c3c; /* Qizil rang */
+    text-shadow: 2px 2px 8px rgba(231, 76, 60, 0.6);
+}
+
+/* O belgisi uchun ranglar */
+.square.o {
+    color: #3498db; /* Ko'k rang */
+    text-shadow: 2px 2px 8px rgba(52, 152, 219, 0.6);
+}
+
+/* Tugmachalar */
+button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Matn uchun */
+.message {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
