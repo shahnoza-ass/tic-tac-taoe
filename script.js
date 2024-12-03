@@ -30,6 +30,7 @@ function updateBoard() {
         }
     });
 }
+
 function makeMove(index) {
     if (board[index] === '' && !gameOver) {
         board[index] = currentPlayer;
