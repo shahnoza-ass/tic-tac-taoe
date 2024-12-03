@@ -18,7 +18,7 @@ function createBoard() {
 function updateBoard() {
     const squares = document.querySelectorAll('.square');
     squares.forEach((square, index) => {
-        square.innerHTML = ''; // Eski rasmni tozalash
+        square.innerHTML = ''; // Eski rasmni olish
         if (board[index] === 'X') {
             square.textContent = 'X'; // X belgisi matn sifatida
             square.classList.add('x'); // X rangini qo‘shish
