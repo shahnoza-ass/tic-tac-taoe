@@ -1,4 +1,4 @@
-/* Asosiy dizayn */
+/* Asosiy dizayn  !*/
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
@@ -17,8 +17,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-/* O'yin maydoni */
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
