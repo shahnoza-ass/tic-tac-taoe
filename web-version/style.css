@@ -1,114 +1,95 @@
-/* ****************** Body, head etc ****************** */
+/* Asosiy dizayn */
 body {
-	margin: 0;
-	padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-header {
-	background-color: #00AEEA;
-	color: #eee;
-	text-align: center;
-	height: 60px;
-	padding-top: 5px;
-	display: block;
-	margin-top: 0px;
-	margin-bottom: 60px;
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
+.container {
+    background: url('images/game-background.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-p {
-	font-size: 14pt;
-	font-weight: bold;
-	font-family: Sans;
-	text-align: center;
-	position: relative;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+/* O'yin maydoni */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
 }
 
-a {
-	color: #00AEEA;
-	text-decoration: none;
-}
-a:hover {
-	color: #00AEEA;
-}
-a:visited {
-	color: #00AEEA;
-}
-
-/* ****************** Table style ****************** */
-#tab-tic-tac-toe {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5px;
-	font-size: 4em;
-	font-family: Sans;
-	color: #444;
-	background: #F8F8F8;
-	width: 310px;
-	height: 300px;
-	text-align: center;
-	vertical-align: center;
-	border: 1px solid #CECECE;
-	border-radius: 5px;
-	box-shadow: 1px 1px 1px #CCC;
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/*Column style*/
-#tab-tic-tac-toe td {
-	border-collapse:collapse;
-	border-left: 5px solid #CCC;
-	border-bottom: 5px solid #CCC;
+/* Hover effekt */
+.square:hover {
+    transform: scale(1.1);
+    background-color: #bdc3c7;
 }
 
-#tab-tic-tac-toe td:first-child {
-	border-left: none;
+/* X belgisi uchun ranglar */
+.square.x {
+    color: #e74c3c; /* Qizil rang */
+    text-shadow: 2px 2px 8px rgba(231, 76, 60, 0.6);
 }
 
-#tab-tic-tac-toe tr:last-child td {
-	border-bottom: none;
+/* O belgisi uchun ranglar */
+.square.o {
+    color: #3498db; /* Ko'k rang */
+    text-shadow: 2px 2px 8px rgba(52, 152, 219, 0.6);
 }
 
-/*Cells*/
-#tab-tic-tac-toe td {
-	cursor: pointer;
-	height: 95px;
-	width: 95px;
+/* Tugmachalar */
+button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-#tab-tic-tac-toe td:hover {
-	background: #ECECEC;
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
 }
 
-/* ****************** Restart Button ****************** */
-#bnt-restart {
-	display: block;
-	padding: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
-	background: #00AEEA;
-	font-size: 1.5em;
-	color: #FFF;
-	border: none;
-	border-radius: 6px;
-	cursor: pointer;
+/* Matn uchun */
+.message {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+    animation: pulse 1s infinite;
 }
 
-#bnt-restart:hover {
-	background: #1DC5FF;
-}
-
-#bnt-restart:active {
-	background: #0787B3;
-}
-
-#bnt-restart:disabled {
-	color: #444;
-	background: #CECECE;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
